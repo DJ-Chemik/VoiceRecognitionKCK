@@ -43,8 +43,8 @@ for part in parts:
     localFreqs.append((maximum / partSize) * sample_rate)
 
 
-fr = np.median(localFreqs)
-if fr < 170:
+avg = (165+180)/2
+if np.median(localFreqs) < avg:
     print("M")
 else:
     print("K")
